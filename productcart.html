@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item p {
+            margin: 0;
+        }
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .checkout-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1em;
+        }
+        .checkout-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <div class="total" id="cartTotal"></div>
+    <button class="checkout-btn" onclick="proceedToPayment()">Proceed to Payment</button>
+
+    <script>
+        // Load Cart Items from localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p>Your cart is empty.</p>';
+            document.querySelector('.checkout-btn').style.display = 'none';
+        } else {
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <p>${item.plan}</p>
+                    <p>$${item.price}</p>
+                `;
+                cartItems.appendChild(itemElement);
+                total += item.price;
+            });
+            cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+
+        }
+
+        // Navigate to Payment Page
+        function proceedToPayment() {
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

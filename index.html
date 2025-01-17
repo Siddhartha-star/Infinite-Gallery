@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Album</title>
+    <link rel="stylesheet" href="./styles.css?v=1">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Infinity Album</h1>
+        <nav>
+            <a href="./Project.html">Home</a>
+            <a href="./login.html">Login</a>
+            <a href="./zcontact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Create and Share Your Memories</h2>
+        <p>Free storage for your albums, with options to upgrade for more space.</p>
+        <button id = "button">Get Started</button>
+    </div>
+
+
+    <!-- Albums Section -->
+    <section>
+        <h2 class = "hel">My Albums</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="date">2024-12-01</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-06/20231025.jpg" alt="Album 1" onclick="openModal(this)">
+            </div>
+            <div class="card">
+                <div class="date">2024-11-28</div>
+                <video controls onclick="openModal(this)" controls width="100%" controls autoplay muted>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="card">
+                <div class="date">2024-11-25</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-05/Thorough%20Testing.jpg" alt="Album 2" onclick="openModal(this)">
+            </div>
+            <div class="card">
+                <div class="date">2024-11-20</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-06/20231028.jpg" alt="Album 3" onclick="openModal(this)">
+            </div>
+            <div class="card">
+                <div class="date">2024-11-18</div>
+                <video controls onclick="openModal(this)" controls width="100%" controls autoplay muted>
+                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="card">
+                <div class="date">2024-11-15</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-05/download%20%284%29_0.jpg" alt="Album 4" onclick="openModal(this)">
+            </div>
+            <div class="card">
+                <div class="date">2024-11-10</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-05/download_0.jpg" alt="Album 5" onclick="openModal(this)">
+            </div>
+            <div class="card">
+                <div class="date">2024-11-05</div>
+                <img src="https://infinityalbum.com/sites/default/files/2024-05/Marketing%20Automation%201.jpg" alt="Album 6" onclick="openModal(this)">
+            </div>
+        </div>     
+    
+<!-- Upload Section (Updated) -->
+        <section class="upload-section">
+            <h2>Upload Your Sweet memories</h2>
+            <p>Share your memories with the world! Only JPG, PNG, WebP, or MP4 files are allowed.</p>
+            <form>
+                <label for="albumFile" class="upload-label">
+                    <span>Choose a file</span>
+                    <input type="file" id="albumFile" name="albumFile" accept=".jpg, .jpeg, .png, .webp, .mp4" required>
+                </label>
+                <button type="submit" id = "upload" class="upload-btn">Upload</button>
+            </form>
+        </section>
+
+
+<div class = "addtocart">
+<!-- Add to Cart Buttons in Pricing Section -->
+<div class="pricing-container">
+    <div class="pricing-card">
+        <h3>Free Plan</h3>
+        <p class="price">$0/month</p>
+        <ul>
+            <li>5GB Storage</li>
+            <li>Basic Support</li>
+            <li>Single User</li>
+        </ul>
+        <button class="add-to-cart" onclick="addToCart('Free Plan', 0)">Add to Cart</button>
+    </div>
+    <div class="pricing-card">
+        <h3>Standard Plan</h3>
+        <p class="price">$4.99/month</p>
+        <ul>
+            <li>50GB Storage</li>
+            <li>Priority Support</li>
+            <li>Up to 3 Users</li>
+        </ul>
+        <button  class="add-to-cart" onclick="addToCart('Standard Plan', 4.99)">Add to Cart</button>
+    </div>
+    <div class="pricing-card">
+        <h3>Premium Plan</h3>
+        <p class="price">$9.99/month</p>
+        <ul>
+            <li>200GB Storage</li>
+            <li>24/7 Support</li>
+            <li>Unlimited Users</li>
+        </ul>
+        <button class="add-to-cart" onclick="addToCart('Premium Plan', 9.99)">Add to Cart</button>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class = "fot">
+        <p>&copy; 2024 Infinity Album. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="">
+        <video id="modalVideo" controls></video>
+    </div>
+
+<script src="./script.js?v=1"></script>
+
+</body>
+</html>

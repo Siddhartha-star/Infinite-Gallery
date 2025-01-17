@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #0091ff 0%, #ff00b7 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header .highlight {
+    color: #ffde59;
+}
+
+.header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Ensures the container takes up enough space */
+    background: #f9f9f9;
+    padding: 2rem;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow for the form */
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Heading */
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+/* Remember me and Forgot Password */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.options a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.options a:hover {
+    color: #2575fc;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem; /* Adds spacing below the options section */
+}
+
+.options label {
+    margin-right: 10px; /* Adds space between 'Remember me' and 'Forgot password' */
+}
+
+.options a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.options a:hover {
+    color: #2575fc;
+}
+
+/* Login Button */
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #6a11cb;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    margin-top: 1rem; /* Adds spacing above the login button */
+}
+
+.login-btn:hover {
+    background: #2575fc;
+}
+
+
+/* Login Button */
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #6a11cb;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background: #2575fc;
+}
+
+/* Register Link */
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+.register-link a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #2575fc;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #0091ff 0%, #ff00b7 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer a {
+        color: yellow;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}

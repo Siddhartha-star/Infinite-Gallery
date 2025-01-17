@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #0091ff 0%, #ff00b7 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.header h1 {
+    font-size: 2.5rem;
+}
+.header .highlight {
+    color: #ffde59;
+}
+.header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Contact Us Form */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background: linear-gradient(to right, #f9f9f9, #f1f1f1);
+    padding: 2rem;
+}
+.contact-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+.contact-form h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+.contact-form button {
+    background: #6a11cb;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+}
+.contact-form button:hover {
+    background: #2575fc;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #0091ff 0%, #ff00b7 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.footer ul li {
+    margin: 0 15px;
+}
+.footer ul li a {
+    text-decoration: none;
+    color: #ffde59;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+.footer ul li a:hover {
+    color: white;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer a {
+        color: yellow;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
